@@ -10,9 +10,11 @@ except ImportError:
         os._exit(-1)
 import os
 import VentanaPrincipal as vp
+
 # Importa al descriptor
 import desArLec as desc
 import empleado as em
+
 
 ###########################################################################
 ## Main Program
@@ -20,21 +22,18 @@ import empleado as em
 def main():
     # Obtiene la tabla Empleados del descriptor
     tablaEmpleados = desc.leerDescriptor()
-    #for empleado in listaEmpleados:
-    #    print(str(empleado))
 
-    #Genera Aplicación
+    # Genera Aplicación
     app = wx.App()
 
     # Genera un el Frame principal y le pasa la tabla de empleados
-    ex = vp.GeneradorConsulta(None,tablaEmpleados)
+    ex = vp.GeneradorConsulta(None, tablaEmpleados)
 
-    #Muestra el frame principal
+    # Muestra el frame principal
     ex.Show()
-    
-    #Pone la aplicacion en loop
+
+    # Pone la aplicacion en loop
     app.MainLoop()
-
-
+    
 if __name__ == '__main__':
-    main() 
+    main()

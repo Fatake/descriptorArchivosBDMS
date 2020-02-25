@@ -10,19 +10,20 @@ def leerDescriptor(nombreArchivo = 'Employees.txt'):
 
     # Lee Archivo
     lineas = archivoDescriptor.readlines()
-
-    # La variable lineaDescriptor guardará todos los elementos de la linea 1 
-    # del descriptor separadas por comas
+    # La variable lineaDescriptor guardará todos los elementos de la linea 1, la cual corresponde al descriptor
     lineaDescriptor = lineas[0].split(",")
-    nombreRelacion = lineaDescriptor[0] # Nombre de la Relacion
     lineas.pop(0)#Elimina la linea 0 dejando solo la tabla
 
+    descriptor = []
     atributosIndice = []
     # Va atributo por atributo leyendo inico y fin del atributo
     for i in range(1,len(lineaDescriptor),3):
         nombreAtributo,inicio,fin = lineaDescriptor[i:i+3]
         atributosIndice.append((nombreAtributo,int(inicio)-1,int(fin)))
-        #print(nombreAtributo+" I:"+inicio+" F:"+fin)
+        descriptor.append(lineaDescriptor[i])
+
+    tabla = []
+    tabla.append(descriptor)
 
     # Procesa Entidad
     # Va linea por linea
@@ -33,7 +34,7 @@ def leerDescriptor(nombreArchivo = 'Employees.txt'):
         for i in range(0,len(atributosIndice)):
             nombreAtributo,inicio, fin = atributosIndice[i]
             if nombreAtributo == "employees_id" :
-                nuevoEmpleado.employees_id = linea[inicio:fin].strip()
+                nuevoEmpleado.employees_id = int(linea[inicio:fin].strip())
             elif nombreAtributo == "first_name" :
                 nuevoEmpleado.first_name = linea[inicio:fin].strip()
             elif nombreAtributo == "last_name" :
@@ -43,22 +44,32 @@ def leerDescriptor(nombreArchivo = 'Employees.txt'):
             elif nombreAtributo == "phone_number" :
                 nuevoEmpleado.phone_number = linea[inicio:fin].strip()
             elif nombreAtributo == "hire_date" :
-                nuevoEmpleado.hire_date = linea[inicio:fin].strip()
+                txt = linea[inicio:fin].strip()
+                nuevoEmpleado.hire_date = txt[0:2] + "/" + txt[2:4] + "/" + txt[4:6]
             elif nombreAtributo == "job_id" :
                 nuevoEmpleado.job_id = linea[inicio:fin].strip()
             elif nombreAtributo == "salary" :
-                nuevoEmpleado.salary = linea[inicio:fin].strip()
+                nuevoEmpleado.salary = int(linea[inicio:fin].strip())
             elif nombreAtributo == "commission_pct" :
-                nuevoEmpleado.commission_pct = linea[inicio:fin].strip()
+                if linea[inicio:fin].strip() == "nul":
+                    nuevoEmpleado.commission_pct = 0
+                else:
+                    nuevoEmpleado.commission_pct = float(linea[inicio:fin].strip())
             elif nombreAtributo == "manager_id" :
-                nuevoEmpleado.manager_id = linea[inicio:fin].strip()
+                if linea[inicio:fin].strip() == "null":
+                    nuevoEmpleado.manager_id = " "
+                else:
+                    nuevoEmpleado.manager_id = int(linea[inicio:fin].strip())
             elif nombreAtributo == "department_id" :
-                nuevoEmpleado.department_id = linea[inicio:fin].strip()
+                if linea[inicio:fin].strip() == "null":
+                    nuevoEmpleado.department_id = " "
+                else:
+                    nuevoEmpleado.department_id = int(linea[inicio:fin].strip())
 
-        listaEmpleados.append(nuevoEmpleado)
+        tabla.append(nuevoEmpleado)
 
     # Cierra el archivo
     archivoDescriptor.close()
 
     #Retorna La lista de empleados
-    return listaEmpleados
+    return tabla
