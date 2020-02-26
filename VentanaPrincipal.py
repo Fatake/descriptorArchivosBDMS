@@ -7,8 +7,10 @@ import empleado as em
 ###########################################################################
 
 class VentanaPrincipal ( wx.Frame ):
+    
 
     def __init__( self, parent , tablaEmpleados):
+        self.__rutaImgagen__ = "D:\Documentos\Computacion\Programacion\BasesDatos\descriptorArchivosBDMS\consulta.jpg"
         self.tablaEmpleados = tablaEmpleados
 
         wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = "GeneradorConsultas", pos = wx.DefaultPosition, size = wx.Size( 950,670 ), style = wx.DEFAULT_FRAME_STYLE|wx.MAXIMIZE|wx.STAY_ON_TOP|wx.HSCROLL|wx.NO_BORDER|wx.TAB_TRAVERSAL )
@@ -27,7 +29,7 @@ class VentanaPrincipal ( wx.Frame ):
         self.labelInformacion.Wrap( -1 )
         separadorPanelPrincipal.Add( self.labelInformacion, 0, wx.ALIGN_CENTER|wx.ALL, 5 )
 
-        self.botonGeneralConsulta = wx.BitmapButton( self.panelPrincipal, wx.ID_ANY, wx.Bitmap( "C:\\Users\\pace_\\Desktop\\consulta.jpg", wx.BITMAP_TYPE_ANY ), wx.Point( 15,30 ), wx.Size( 750,410 ), wx.BU_AUTODRAW )
+        self.botonGeneralConsulta = wx.BitmapButton( self.panelPrincipal, wx.ID_ANY, wx.Bitmap( self.__rutaImgagen__, wx.BITMAP_TYPE_ANY ), wx.Point( 15,30 ), wx.Size( 750,410 ), wx.BU_AUTODRAW )
 
         separadorPanelPrincipal.Add( self.botonGeneralConsulta, 0, wx.ALIGN_CENTER|wx.ALL, 5 )
 
