@@ -7,7 +7,7 @@ Employees,employees_id,1,6,first_name,7,26,last_name,27,51,email,52,76,phone_num
    105 	             David     	             Austin    	             DAUSTIN   	    590.423.4569 250697	  IT_PROG    4800nul   103  60
    106 	             Valli                Pataballa    	            VPATABAL   	    590.423.4560 050298	  IT_PROG    4800nul   103  60
    107 	             Diana     	            Lorentz    	            DLORENTZ   	    590.423.5567 070299	  IT_PROG    4200nul   103  60
-   108                Alma     	          Greenberg    	            NGREENBE   	    515.124.4569 170894	   FI_MGR   12000nul   101 100
+   108               Nancy     	          Greenberg    	            NGREENBE   	    515.124.4569 170894	   FI_MGR   12000nul   101 100
    109 	            Daniel     	             Faviet    	             DFAVIET   	    515.124.4169 160894FI_ACCOUNT    9000nul   108 100
    110                John     	               Chen    	               JCHEN   	    515.124.4269 280997FI_ACCOUNT    8200nul   108 100
    111              Ismael     	            Sciarra    	            ISCIARRA   	    515.124.4369 300997FI_ACCOUNT    7700nul   108 100
@@ -17,7 +17,7 @@ Employees,employees_id,1,6,first_name,7,26,last_name,27,51,email,52,76,phone_num
    115           Alexander     	               Khoo    	               AKHOO   	    515.127.4562 180595	 PU_CLERK    3100nul   114  30
    116              Shelli     	              Baida    	              SBAIDA   	    515.127.4563 241297	 PU_CLERK    2900nul   114  30
    117               Sigal     	             Tobias    	             STOBIAS   	    515.127.4564 240797  PU_CLERK    2800nul   114  30
-   118                 Guy     	             Himuro    	             GHIMURO   	    515.127.4565 151198	 PU_CLERK    2600nul   114  30
+   118              Guuuuy     	             Himuro    	             GHIMURO   	    515.127.4565 151198	 PU_CLERK    3700nul   114  30
    119               Karen     	         Colmenares    	            KCOLMENA   	    515.127.4566 100899	 PU_CLERK    2500nul   114  30
    120             Matthew     	              Weiss    	              MWEISS   	    650.123.1234 180796	   ST_MAN    8000nul   100  50
    121                Adam     	              Fripp    	              AFRIPP   	    650.123.2234 100497	   ST_MAN    8200nul   100  50

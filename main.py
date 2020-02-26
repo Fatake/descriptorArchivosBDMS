@@ -1,3 +1,4 @@
+import os
 try:
     import wx
 except ImportError:
@@ -8,13 +9,12 @@ except ImportError:
     except ImportError:
         print("Se tiene que instalar la libreria wxpython\n")
         os._exit(-1)
-import os
-import VentanaPrincipal as vp
+
+import VentanaPrincipal as p
 
 # Importa al descriptor
 import desArLec as desc
 import empleado as em
-
 
 ###########################################################################
 ## Main Program
@@ -22,12 +22,11 @@ import empleado as em
 def main():
     # Obtiene la tabla Empleados del descriptor
     tablaEmpleados = desc.leerDescriptor()
-
     # Genera Aplicación
     app = wx.App()
 
     # Genera un el Frame principal y le pasa la tabla de empleados
-    ex = vp.GeneradorConsulta(None, tablaEmpleados)
+    ex = p.VentanaPrincipal(None,tablaEmpleados)
 
     # Muestra el frame principal
     ex.Show()
