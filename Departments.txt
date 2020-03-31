@@ -1,0 +1,28 @@
+Departments,department_id,1,4,department_name,5,34,manager_id,35,40,location_id,41,44
+  10                Administration   2001700
+  20                     Marketing   2011800
+  30                    Purchasing   1141700
+  40               Human Resources   2032400
+  50                      Shipping   1211500
+  60                            IT   1031400
+  70              Public Relations   2042700
+  80                         Sales   1452500
+  90                     Executive   1001700
+ 100                       Finance   1081700
+ 110                    Accounting   2051700
+ 120                      Treasury  null1700
+ 130                 Corporate Tax  null1700
+ 140            Control And Credit  null1700
+ 150          Shareholder Services  null1700
+ 160                      Benefits  null1700
+ 170                 Manufacturing  null1700
+ 180                  Construction  null1700
+ 190                   Contracting  null1700
+ 200                    Operations  null1700
+ 210                    IT Support  null1700
+ 220                           NOC  null1700
+ 230                   IT Helpdesk  null1700
+ 240              Government Sales  null1700
+ 250                  Retail Sales  null1700
+ 260                    Recruiting  null1700
+ 270                       Payroll  null1700
